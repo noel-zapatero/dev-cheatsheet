@@ -1,0 +1,21 @@
+.toolbar{
+    color: white;
+    background-color: darkslategrey;
+}
+
+.mat-list-icon {
+    color: darkslategrey;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.sidenavcontainer {
+    width: 100%;
+    height: 100%;
+}
+
+.sidenav {
+    padding: 20px;  
+}
