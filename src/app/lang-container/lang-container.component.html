@@ -1,3 +1,44 @@
-<p>lang-container works!</p>
+<div class="acc-container">
+    <div style="text-align: center; padding: 20px;">
+        <h1>{{lang}}</h1>
+    </div>
+    <mat-accordion class="accordion">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Introduccion
+                </mat-panel-title>
+                <mat-panel-description>
+                    Informacion general
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            
+            {{language.intro}}
+        </mat-expansion-panel>
 
-<p>{{lang}}</p>
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Sintaxis Básica
+                </mat-panel-title>
+                <mat-panel-description>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            {{language.sintaxis}}
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Herramientas Necesarias
+                </mat-panel-title>
+                <mat-panel-description>
+                    Software recomendado/necesario para desarrollar en el lenguaje seleccionado
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            {{language.herramientas}}
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

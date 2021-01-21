@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { LangContainerComponent } from './lang-container/lang-container.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,7 +23,11 @@ export class AppComponent {
     }
   ]
 
-  navigate(lang: string){
+  navigateLang(lang: string){
     this.router.navigate(["lang", lang]);
+  }
+  
+  navigate(route: string){
+    this.router.navigate([route]);
   }
 }

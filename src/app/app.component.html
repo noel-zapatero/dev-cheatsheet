@@ -3,7 +3,7 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>DEV CHEATSHEET</span>
+  <span (click)="navigate('')">DEV CHEATSHEET</span>
   <span class="spacer"></span>
 </mat-toolbar>
 
@@ -11,9 +11,17 @@
   <mat-drawer #drawer class="sidenav" mode="side">
     <mat-selection-list [multiple]="false">
       <div mat-subheader>Lenguajes Basicos</div>
-      <mat-list-option *ngFor="let lang of languages" (click)='navigate(lang.name)'>
+      <mat-list-option *ngFor="let lang of languages" (click)='navigateLang(lang.name)'>
         <mat-icon mat-list-icon>code</mat-icon>
         <div mat-line>{{lang.name}}</div>
+      </mat-list-option>
+    </mat-selection-list>
+    <mat-divider></mat-divider>
+    <mat-selection-list [multiple]="false">
+      <div mat-subheader>Software</div>
+      <mat-list-option (click)='navigate("software")'>
+        <mat-icon mat-list-icon>laptop</mat-icon>
+        <div mat-line>Software</div>
       </mat-list-option>
     </mat-selection-list>
   </mat-drawer>
