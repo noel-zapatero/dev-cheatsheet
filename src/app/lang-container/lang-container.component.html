@@ -1,6 +1,6 @@
 <div class="acc-container">
     <div style="text-align: center; padding: 20px;">
-        <h1>{{lang}}</h1>
+        <h1>{{selectedLang.name}}</h1>
     </div>
     <mat-accordion class="accordion">
         <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
@@ -13,7 +13,7 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
             
-            {{language.intro}}
+            {{selectedLang.intro}}
         </mat-expansion-panel>
 
         <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
@@ -25,7 +25,17 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
-            {{language.sintaxis}}
+            <div>
+                {{selectedLang.sintaxis.comentarios}}
+                <ul>
+                    <li *ngFor="let tipo of selectedLang.sintaxis.tiposComentarios; let i = index">
+                        {{tipo}} Ej: 
+                        <code>
+                            <pre>{{selectedLang.sintaxis.ejemplosComentarios[i]}}</pre>
+                        </code>
+                    </li>
+                </ul>
+            </div>
         </mat-expansion-panel>
 
         <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
@@ -38,7 +48,7 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
-            {{language.herramientas}}
+            {{lang}}
         </mat-expansion-panel>
     </mat-accordion>
 </div>

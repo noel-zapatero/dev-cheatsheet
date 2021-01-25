@@ -19,7 +19,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDividerModule} from '@angular/material/divider';
 import { HomeContainerComponent } from './home-container/home-container.component';
 import { SoftwareContainerComponent } from './software-container/software-container.component';
-import { LanguageService } from './shared/language-service';
 
 @NgModule({
   declarations: [
@@ -43,7 +42,7 @@ import { LanguageService } from './shared/language-service';
     MatInputModule,
     MatDividerModule
   ],
-  providers: [LanguageService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

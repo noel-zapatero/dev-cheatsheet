@@ -16,3 +16,15 @@
     width: 95%;
     margin: auto;
 }
+
+pre{
+  font-family: Consolas,"courier new";
+  color: crimson;
+  font-size: 105%;
+  background-color: #f1f1f1;
+  display: inline-block; /*table para ponerlo en otra linea, sin el vertical align*/
+  vertical-align: middle;
+  white-space: pre;
+  margin: 1em 0px;
+  overflow: hidden;
+}

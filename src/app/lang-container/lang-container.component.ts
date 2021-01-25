@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { Language } from '../shared/language';
-import { LanguageService } from '../shared/language-service';
-
+import languages from '../../assets/json/languages.json'
 @Component({
   selector: 'app-lang-container',
   templateUrl: './lang-container.component.html',
@@ -11,12 +9,12 @@ import { LanguageService } from '../shared/language-service';
 export class LangContainerComponent implements OnInit {
 
   lang: string = '';
-  language!: Language;
   step: number = 0;
+  json: any = languages;
+  selectedLang: any;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private router: Router,
-              private langService: LanguageService) {
+              private router: Router) {
     
       this.router.events.subscribe((ev) =>{
       if(ev instanceof NavigationEnd){
@@ -39,7 +37,7 @@ export class LangContainerComponent implements OnInit {
   }
   
   setLang(){
-    this.language = this.langService.getLang(this.lang)
+    this.selectedLang = this.json[this.lang]
   }
 
   setStep(index: number) {
