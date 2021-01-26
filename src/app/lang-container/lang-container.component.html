@@ -25,17 +25,106 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
-            <div>
-                {{selectedLang.sintaxis.comentarios}}
-                <ul>
-                    <li *ngFor="let tipo of selectedLang.sintaxis.tiposComentarios; let i = index">
-                        {{tipo}} Ej: 
-                        <code>
-                            <pre>{{selectedLang.sintaxis.ejemplosComentarios[i]}}</pre>
-                        </code>
-                    </li>
-                </ul>
-            </div>
+            <mat-accordion multi>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Comentarios
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+
+                  {{selectedLang.sintaxis.comentarios}}
+                  <ul>
+                      <li *ngFor="let tipo of selectedLang.sintaxis.tiposComentarios; let i = index">
+                          {{tipo}} Ej: 
+                          <code>
+                              <pre>{{selectedLang.sintaxis.ejemplosComentarios[i]}}</pre>
+                          </code>
+                      </li>
+                  </ul>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Identificadores (Convenciones)
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+  
+                    {{selectedLang.sintaxis.convenciones}} Ej: 
+                    <code>
+                        <pre>{{selectedLang.sintaxis.ejemploConvenciones}}</pre>
+                    </code>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Tipos Primitivos
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+  
+                    {{selectedLang.sintaxis.tiposPrimitivos}}
+                    <ul>
+                        <li *ngFor="let prim of selectedLang.sintaxis.primitivos">{{prim}}</li>
+                    </ul>
+                </mat-expansion-panel>
+  
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Declaraciones
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+  
+                    {{selectedLang.sintaxis.declaraciones}}
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Variables
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+  
+                    {{selectedLang.sintaxis.variables}} Ejs:
+                    <code *ngFor="let variables of selectedLang.sintaxis.ejemplosVariables">
+                        <pre>{{variables}}</pre>
+                        <span class="spacer"></span>
+                    </code>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Modificadores
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+  
+                    {{selectedLang.sintaxis.modificadoresAccess}}
+                    <ul>
+                        <li *ngFor="let mod of selectedLang.sintaxis.ejemplosModAccess">{{mod}}</li>
+                    </ul>
+                    {{selectedLang.sintaxis.modificadoresOtros}}
+                    <ul>
+                        <li *ngFor="let mod of selectedLang.sintaxis.ejemplosModOtros">{{mod}}</li>
+                    </ul>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Arrays
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+  
+                    {{selectedLang.sintaxis.arrays}} Ej: 
+                    <code *ngFor="let arr of selectedLang.sintaxis.ejemplosArrays">
+                        <pre>{{arr}}</pre>
+                        <span class="spacer"></span>
+                    </code>
+                </mat-expansion-panel>
+              </mat-accordion>
         </mat-expansion-panel>
 
         <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>

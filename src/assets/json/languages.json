@@ -5,7 +5,20 @@
         "sintaxis":{
             "comentarios":"Los comentarios en Java pueden escribirse de varias maneras: ",
             "tiposComentarios":["'//' para comentarios de una sola linea.", "'/* */' para comentarios multilinea.", "'/** */' para comentarios multilinea de Documentacion."],
-            "ejemplosComentarios":["//Comentario numero 1", "/* Comentario \nnumero 2 */", "/** Comentario \nnumero 3 */"]
+            "ejemplosComentarios":["//Comentario numero 1", "/* Comentario \nnumero 2 */", "/** Comentario \nnumero 3 */"],
+            "convenciones":"Los identificadores suelen utilizar CamelCase como estilo de escritura.",
+            "ejemploConvenciones":"nombreUsuario",
+            "tiposPrimitivos":"En Java hay 8 tipos de datos primitivos, ademas del tipo String, el cual no es precisamente primitivo, pero es igual de importante en su uso:",
+            "primitivos":["byte","short","int","long","float","double","boolean","char", "String"],
+            "declaraciones":"Las declaraciones en Java deben llevar un ';' al final de la linea. Luego de la declaracion de una clase, el ';' no es obligatorio",
+            "variables":"Al ser un lenguaje tipado, las variables deben ser declaradas con su tipo correspondiente. Varias variables pueden ser declaradas a la vez para un mismo tipo.",
+            "ejemplosVariables":["int edad;", "boolean esHombre, esMujer;"],
+            "modificadoresAccess":"Los modificadores de accesibilidad permiten una encapsulacion mayor en el codigo. Los tipos de modificadores son los siguientes:",
+            "ejemplosModAccess":["public","protected","private"],
+            "modificadoresOtros":"Hay otros modificadores que no afectan la accesiblidad, pero ofrecen otras funcionalidades",
+            "ejemplosModOtros":["final","abstract","static","transient","volatile","synchronized"],
+            "arrays":"Los arrays en Java se identifican con un '[ ]' luego del tipo de la variable. En el caso de arrays multidimensionales, simplemente se ponen los [ ] necesarios",
+            "ejemplosArrays":["String[] nombres = {'George','Lucas'};", "int[][] numeros = {{1,2,3},{4,5}};"]
         }
     },
     "Python":{
