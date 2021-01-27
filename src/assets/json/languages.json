@@ -18,7 +18,14 @@
             "modificadoresOtros":"Hay otros modificadores que no afectan la accesiblidad, pero ofrecen otras funcionalidades",
             "ejemplosModOtros":["final","abstract","static","transient","volatile","synchronized"],
             "arrays":"Los arrays en Java se identifican con un '[ ]' luego del tipo de la variable. En el caso de arrays multidimensionales, simplemente se ponen los [ ] necesarios",
-            "ejemplosArrays":["String[] nombres = {'George','Lucas'};", "int[][] numeros = {{1,2,3},{4,5}};"]
+            "ejemplosArrays":["String[] nombres = {'George','Lucas'};", "int[][] numeros = {{1,2,3},{4,5}};"],
+            "operadores":"Hay diferentes tipos de operadores en Java:",
+            "operadoresTipos":["Aritmeticos","Asignacion","Comparacion","Logicos"],
+            "ejemplosOperadores":["+, -, *, /, %, ++, --","=, +=, -=, *=, /=, %=, &=, |=, ^=, >>=, <<=", "==, !==, >, <, >=, <=","&&, ||, !"],
+            "ifelse":"Al igual que en la mayoria de los lenguajes, la declaracion de un bloque If/Else se da de la siguiente forma:",
+            "ejemploIfelse":"if(condicion){\n//Bloque de codigo condicion True\n}else{\n//Bloque de codigo condicion false\n}",
+            "ifelseotros":"Ademas, permite utilizar 'else if' para testear mas de una condicion. Tambien pueden utilizarse la operacion ternaria (una version resumida de un if/else):",
+            "ejemploIfelseOtro":"variable = (condicion) ? expresion true : expresion false;"
         }
     },
     "Python":{
