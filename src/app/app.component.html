@@ -10,18 +10,18 @@
 <mat-drawer-container class="sidenav-container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side">
     <mat-selection-list [multiple]="false">
-      <div mat-subheader>Lenguajes Basicos</div>
+      <div mat-subheader class="subheader">Lenguajes Basicos</div>
       <mat-list-option *ngFor="let lang of languages" (click)='navigateLang(lang.name)'>
         <mat-icon mat-list-icon>code</mat-icon>
-        <div mat-line>{{lang.name}}</div>
+        <div mat-line class="matline">{{lang.name}}</div>
       </mat-list-option>
     </mat-selection-list>
     <mat-divider></mat-divider>
     <mat-selection-list [multiple]="false">
-      <div mat-subheader>Software</div>
+      <div mat-subheader class="subheader">Software</div>
       <mat-list-option (click)='navigate("software")'>
         <mat-icon mat-list-icon>laptop</mat-icon>
-        <div mat-line>Software</div>
+        <div mat-line class="matline">Software</div>
       </mat-list-option>
     </mat-selection-list>
   </mat-drawer>

@@ -1,8 +1,10 @@
 {
     "Java":{
         "name":"Java",
-        "intro":"Java es un lenguaje orientado a objetos desarrollado por la empresa Sun Mycrosystems, y actualmente mantenido por Oracle Corporation. Creado en 1995 por James Gosling, es un lenguaje tipado con una sintaxis basada en C/C++; el cual es actualmente utilizado en miles de millones de dispositivos en el mundo. Se utiliza para aplicaciones web, de escritorio o incluso mobile a traves del Android SDK.",
+        "intro":"Java es un lenguaje orientado a objetos desarrollado por la empresa Sun Mycrosystems, y actualmente mantenido por Oracle Corporation. Creado en 1995 por James Gosling, es un lenguaje tipado con una sintaxis basada en C/C++; el cual es actualmente utilizado en miles de millones de dispositivos en el mundo; en donde se destaca el uso de encapsulacion, polimorfismo y herencia. Se utiliza para aplicaciones web, de escritorio o incluso mobile a traves del Android SDK.",
+        "masInfo":["https://www.oracle.com/java/","https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)"],
         "sintaxis":{
+            "masInfo":"https://www.w3schools.com/java/default.asp",
             "comentarios":"Los comentarios en Java pueden escribirse de varias maneras: ",
             "tiposComentarios":["'//' para comentarios de una sola linea.", "'/* */' para comentarios multilinea.", "'/** */' para comentarios multilinea de Documentacion."],
             "ejemplosComentarios":["//Comentario numero 1", "/* Comentario \nnumero 2 */", "/** Comentario \nnumero 3 */"],
@@ -23,9 +25,16 @@
             "operadoresTipos":["Aritmeticos","Asignacion","Comparacion","Logicos"],
             "ejemplosOperadores":["+, -, *, /, %, ++, --","=, +=, -=, *=, /=, %=, &=, |=, ^=, >>=, <<=", "==, !==, >, <, >=, <=","&&, ||, !"],
             "ifelse":"Al igual que en la mayoria de los lenguajes, la declaracion de un bloque If/Else se da de la siguiente forma:",
-            "ejemploIfelse":"if(condicion){\n//Bloque de codigo condicion True\n}else{\n//Bloque de codigo condicion false\n}",
+            "ejemploIfelse":"if(condicion){\n //Bloque de codigo condicion True\n}else{\n //Bloque de codigo condicion false\n}",
             "ifelseotros":"Ademas, permite utilizar 'else if' para testear mas de una condicion. Tambien pueden utilizarse la operacion ternaria (una version resumida de un if/else):",
-            "ejemploIfelseOtro":"variable = (condicion) ? expresion true : expresion false;"
+            "ejemploIfelseOtro":"variable = (condicion) ? expresion true : expresion false;",
+            "forloop":"Al igual que en la mayoria de los lenguajes, la declaracion de un loop For se da de la siguiente forma:",
+            "defFor":"for(statement antes del codigo; condicion de ejecucion; ejecucion en cada vuelta){\n //Bloque de codigo\n}",
+            "ejemploFor":"for(int i=0; i<10; i++){\n  System.out.println(i)\n}",
+            "while":"Al igual que en la mayoria de los lenguajes, la declaracion de un While se da de la siguiente forma:",
+            "ejemploWhile":"int i = 0;\nwhile(i<10){\n  System.out.println(i);\n  i++;\n}",
+            "breakcontinue":"El uso de break y continue sirve para salir o saltar una iteracion/loop.",
+            "ejemploBreak":"for(i=0; i<10; i++){\n  if(i==5){\n    continue; //Saltea esta iteracion\n  }\n  if(i==7){\n    break; //Sale del loop;\n  }\n  System.out.println(i);\n}"
         }
     },
     "Python":{

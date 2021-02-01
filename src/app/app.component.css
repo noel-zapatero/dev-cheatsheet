@@ -1,13 +1,9 @@
 .toolbar{
     color: white;
-    background-color: darkslategrey;
+    background-color: rgb(62, 62, 62);
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.mat-list-icon {
-    color: darkslategrey;
 }
 
 .spacer {
@@ -20,5 +16,18 @@
 }
 
 .sidenav {
-    padding: 20px;  
+    padding: 20px;
+    background-image: linear-gradient(rgb(60, 60, 60), rgb(120,120,120));
+}
+
+.subheader, .matline{
+    color: white;
+}
+
+mat-icon{
+    color: red;
+}
+
+mat-divider{
+    border-top-color: red;
 }
