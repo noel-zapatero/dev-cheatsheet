@@ -33,17 +33,16 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
-            <span>
-              Para mas informacion: <a href={{selectedLang.sintaxis.masInfo}}>{{selectedLang.sintaxis.masInfo}}</a>
-              <br>
-              <br>
-            </span>
             <mat-accordion multi>
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp1 class="sintaxis-acc" hideToggle="true">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
                       Comentarios
                     </mat-panel-title>
+                    <mat-panel-description> 
+                      <mat-icon *ngIf="!matExp1.expanded" class="arrow-acc">expand_more</mat-icon>
+                      <mat-icon *ngIf="matExp1.expanded" class="arrow-acc">expand_less</mat-icon>
+                    </mat-panel-description>
                   </mat-expansion-panel-header>
 
                   {{selectedLang.sintaxis.comentarios}}
@@ -57,11 +56,15 @@
                   </ul>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp2 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Identificadores (Convenciones)
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp2.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp2.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.convenciones}} Ej: 
@@ -70,11 +73,15 @@
                     </code>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp3 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Tipos Primitivos
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp3.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp3.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.tiposPrimitivos}}
@@ -83,21 +90,29 @@
                     </ul>
                 </mat-expansion-panel>
   
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp4 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Declaraciones
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp4.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp4.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.declaraciones}}
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp5 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Variables
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp5.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp5.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.variables}} Ejs:
@@ -107,11 +122,15 @@
                     </code>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp6 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Modificadores
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp6.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp6.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.modificadoresAccess}}
@@ -124,11 +143,15 @@
                     </ul>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp7 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Arrays
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp7.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp7.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.arrays}} Ej:
@@ -139,11 +162,15 @@
                     </code>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp8 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Operadores
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp8.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp8.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.operadores}}
@@ -157,11 +184,15 @@
                     </ul>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp9 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         If/Else
                       </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp9.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp9.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
   
                     <span>
@@ -180,11 +211,15 @@
                     </p>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp10 class="sintaxis-acc" hideToggle="true">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
                       For
                     </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp10.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp10.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                   </mat-expansion-panel-header>
 
                   <span>
@@ -204,11 +239,15 @@
                   </p>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp11 class="sintaxis-acc" hideToggle="true">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
                       While
                     </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp11.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp11.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                   </mat-expansion-panel-header>
 
                   <span>
@@ -224,11 +263,15 @@
                   <span style="font-style: italic">Lo importante es siempre recordar la condicion de cierre de While ya que de no ser asi, entraria en loop infinito.</span>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel>
+                <mat-expansion-panel #matExp12 class="sintaxis-acc" hideToggle="true">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
                       Break/Continue
                     </mat-panel-title>
+                      <mat-panel-description> 
+                        <mat-icon *ngIf="!matExp12.expanded" class="arrow-acc">expand_more</mat-icon>
+                        <mat-icon *ngIf="matExp12.expanded" class="arrow-acc">expand_less</mat-icon>
+                      </mat-panel-description>
                   </mat-expansion-panel-header>
 
                   <span>
@@ -242,6 +285,17 @@
                   </span>                  
                 </mat-expansion-panel>
               </mat-accordion>
+
+              <span>
+                <br>
+                Para mas informacion:
+                <ul>
+                  <li *ngFor="let link of selectedLang.sintaxis.masInfo">
+                    <a href={{link}}>{{link}}</a>
+                  </li>
+                </ul>
+                <br>
+              </span>
         </mat-expansion-panel>
 
         <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>

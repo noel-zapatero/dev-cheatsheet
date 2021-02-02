@@ -17,6 +17,10 @@
     margin: auto;
 }
 
+.sintaxis-acc:nth-child(odd) mat-expansion-panel-header{
+  background: rgb(200, 200, 200);
+}
+
 pre{
   font-family: Consolas,"courier new";
   color: crimson;
@@ -31,4 +35,10 @@ pre{
 
 .spacer{
   margin: 10px;
+}
+
+.arrow-acc{
+  color: red;
+  position: absolute;
+  right: 15px
 }

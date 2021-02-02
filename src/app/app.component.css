@@ -1,3 +1,11 @@
+
+@font-face {
+    font-family: 'MADhacker';
+    src: url('../assets/fonts/MADhacker.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .toolbar{
     color: white;
     background-color: rgb(62, 62, 62);
@@ -21,6 +29,7 @@
 }
 
 .subheader, .matline{
+    font-family: MADhacker !important; /*Borrar si queda feo*/
     color: white;
 }
 
@@ -31,3 +40,7 @@ mat-icon{
 mat-divider{
     border-top-color: red;
 }
+
+
+
+

@@ -3,14 +3,14 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span (click)="navigate('')">DEV CHEATSHEET</span>
+  <img src="../assets/img/Logo.png" (click)="navigate('')" style="height: 75px; width: auto; cursor: pointer;">
   <span class="spacer"></span>
 </mat-toolbar>
 
 <mat-drawer-container class="sidenav-container" autosize>
-  <mat-drawer #drawer class="sidenav" mode="side">
+  <mat-drawer #drawer class="sidenav" mode="side" opened="true">
     <mat-selection-list [multiple]="false">
-      <div mat-subheader class="subheader">Lenguajes Basicos</div>
+      <div mat-subheader class="subheader">Lenguajes</div>
       <mat-list-option *ngFor="let lang of languages" (click)='navigateLang(lang.name)'>
         <mat-icon mat-list-icon>code</mat-icon>
         <div mat-line class="matline">{{lang.name}}</div>
