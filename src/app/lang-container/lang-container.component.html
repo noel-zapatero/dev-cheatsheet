@@ -1,6 +1,6 @@
 <div class="acc-container">
     <div style="text-align: center; padding: 20px;">
-        <h1>{{selectedLang.name}}</h1>
+        <h1  class="monoid">{{selectedLang.name}}</h1>
     </div>
     <mat-accordion class="accordion">
         <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
@@ -307,8 +307,36 @@
                     Software recomendado/necesario para desarrollar en el lenguaje seleccionado
                 </mat-panel-description>
             </mat-expansion-panel-header>
+            
+            Frameworks:
+            <ul>
+              <li *ngFor="let fw of selectedLang.herramientas.frameworks">
+                <b>{{fw.name}}</b>: <a href={{fw.url}}>{{fw.url}}</a>
+              </li>
+            </ul>
 
-            {{lang}}
+            IDE's:
+            <ul>
+              <li *ngFor="let ide of selectedLang.herramientas.ides">
+                <b>{{ide.name}}</b>: <a href={{ide.url}}>{{ide.url}}</a>
+              </li>
+            </ul>
+
+            Otras Descargas Necesarias:
+            <ul>
+              <li *ngFor="let other of selectedLang.herramientas.otherDownloads">
+                <b>{{other.name}}</b>: <a href={{other.url}}>{{other.url}}</a>
+              </li>
+            </ul>
+
+            Otras Acciones Necesarias:
+            <ul>
+              <li *ngFor="let otherA of selectedLang.herramientas.otherActions">
+                <b>{{otherA.name}}</b>: <a href={{otherA.url}}>{{otherA.url}}</a>
+              </li>
+            </ul>
+
+            <span style="font-style: italic">Instrucciones y acciones adicionales para el lenguaje seleccionado pueden llegar a ser necesarias en el uso de cada herramienta. Referir a la documentacion de cada software.</span>
         </mat-expansion-panel>
     </mat-accordion>
 </div>

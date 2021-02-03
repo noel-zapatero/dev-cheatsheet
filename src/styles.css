@@ -2,3 +2,17 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a{
+    text-decoration-color: red;
+    color:red;
+}
+
+a:visited{
+    text-decoration-color: darkred;
+    color:darkred;
+}
+
+a:hover{
+    color:rgb(255, 115, 115);
+}

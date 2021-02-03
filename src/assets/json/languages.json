@@ -1,7 +1,7 @@
 {
     "Java":{
         "name":"Java",
-        "intro":"Java es un lenguaje orientado a objetos desarrollado por la empresa Sun Mycrosystems, y actualmente mantenido por Oracle Corporation. Creado en 1995 por James Gosling, es un lenguaje tipado con una sintaxis basada en C/C++; el cual es actualmente utilizado en miles de millones de dispositivos en el mundo; en donde se destaca el uso de encapsulacion, polimorfismo y herencia. Se utiliza para aplicaciones web, de escritorio o incluso mobile a traves del Android SDK.",
+        "intro":"Java es un lenguaje basado en clases y orientado a objetos desarrollado por la empresa Sun Mycrosystems, y actualmente mantenido por Oracle Corporation. Creado en 1995 por James Gosling, es un lenguaje tipado con una sintaxis basada en C/C++; el cual es actualmente utilizado en miles de millones de dispositivos en el mundo; en donde se destaca el uso de encapsulacion, polimorfismo y herencia. Se utiliza para aplicaciones web, de escritorio o incluso mobile a traves del Android SDK y su lenguaje derivado, Kotlin.",
         "masInfo":["https://www.oracle.com/java/","https://en.wikipedia.org/wiki/Java_(programming_language)"],
         "sintaxis":{
             "masInfo":["https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html","https://www.w3schools.com/java/default.asp"],
@@ -35,6 +35,12 @@
             "ejemploWhile":"int i = 0;\nwhile(i<10){\n  System.out.println(i);\n  i++;\n}",
             "breakcontinue":"El uso de break y continue sirve para salir o saltar una iteracion/loop.",
             "ejemploBreak":"for(i=0; i<10; i++){\n  if(i==5){\n    continue; //Saltea esta iteracion\n  }\n  if(i==7){\n    break; //Sale del loop;\n  }\n  System.out.println(i);\n}"
+        },
+        "herramientas":{
+            "frameworks":[{"name":"Spring Framework","url":"https://spring.io/"},{"name":"Apache Struts","url":"https://struts.apache.org/"},{"name":"Grails","url":"https://grails.org/"},{"name":"Hibernate","url":"https://hibernate.org/"},{"name":"JSF","url":"http://www.javaserverfaces.org/"}],
+            "ides":[{"name":"Eclipse","url":"https://www.eclipse.org/downloads/packages/"},{"name":"IntelliJ","url":"https://www.jetbrains.com/es-es/idea/"},{"name":"NetBeans","url":"https://netbeans.apache.org/download/index.html"},{"name":"VisualCode","url":"https://code.visualstudio.com/"}],
+            "otherDownloads":[{"name":"Java Plataform","url":"https://www.oracle.com/technetwork/es/java/javase/downloads/index.html"},{"name":"JDK","url":"https://www.oracle.com/ar/java/technologies/javase/javase-jdk8-downloads.html"}],
+            "otherActions":[{"name":"Creacion de PATH (Windows)","url":"https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html"}]
         }
     },
     "Python":{
