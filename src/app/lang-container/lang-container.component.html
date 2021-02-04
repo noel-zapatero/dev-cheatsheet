@@ -1,6 +1,6 @@
 <div class="acc-container">
     <div style="text-align: center; padding: 20px;">
-        <h1  class="monoid">{{selectedLang.name}}</h1>
+        <h1 style="color:red;font-weight: bold;font-size: 40px;font-family: MADhacker;">{{selectedLang.name}}</h1>
     </div>
     <mat-accordion class="accordion">
         <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
@@ -120,13 +120,17 @@
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.variables}} Ejs:
-                    <code *ngFor="let variables of selectedLang.sintaxis.ejemplosVariables">
-                        <pre>{{variables}}</pre>
-                        <span class="spacer"></span>
-                    </code>
+                    <ul>
+                      <li *ngFor="let variables of selectedLang.sintaxis.ejemplosVariables">
+                        <code>
+                          <pre>{{variables}}</pre>
+                          <span class="spacer"></span>
+                      </code>
+                      </li>
+                    </ul>
                 </mat-expansion-panel>
 
-                <mat-expansion-panel #matExp6 class="sintaxis-acc" hideToggle="true">
+                <mat-expansion-panel #matExp6 class="sintaxis-acc" hideToggle="true" *ngIf="selectedLang.sintaxis.modificadoresAccess != ''">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
                         Modificadores
@@ -207,12 +211,14 @@
                             </code>
                         </p>
                     </span>
-                    <p>
+                    <span>
                         {{selectedLang.sintaxis.ifelseotros}}
-                        <code>
+                        <p>
+                          <code>
                             <pre>{{selectedLang.sintaxis.ejemploIfelseOtro}}</pre>
                         </code>
-                    </p>
+                        </p>
+                    </span>
                 </mat-expansion-panel>
 
                 <mat-expansion-panel #matExp10 class="sintaxis-acc" hideToggle="true">
@@ -228,7 +234,7 @@
 
                   <span>
                       {{selectedLang.sintaxis.forloop}}
-                      <p>
+                      <p *ngIf="selectedLang.sintaxis.defFor != ''">
                           <code>
                               <pre>{{selectedLang.sintaxis.defFor}}</pre>
                           </code>
