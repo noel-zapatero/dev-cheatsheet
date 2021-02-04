@@ -59,7 +59,7 @@
                 <mat-expansion-panel #matExp2 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
-                        Identificadores (Convenciones)
+                        Convenciones
                       </mat-panel-title>
                       <mat-panel-description> 
                         <mat-icon *ngIf="!matExp2.expanded" class="arrow-acc">expand_more</mat-icon>
@@ -68,15 +68,19 @@
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.convenciones}} Ej: 
-                    <code>
-                        <pre>{{selectedLang.sintaxis.ejemploConvenciones}}</pre>
-                    </code>
+                    <ul>
+                      <li *ngFor="let conv of selectedLang.sintaxis.ejemploConvenciones">
+                        <code>
+                          <pre>{{conv}}</pre>
+                      </code>
+                      </li>
+                    </ul>
                 </mat-expansion-panel>
 
                 <mat-expansion-panel #matExp3 class="sintaxis-acc" hideToggle="true">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
-                        Tipos Primitivos
+                        Tipos
                       </mat-panel-title>
                       <mat-panel-description> 
                         <mat-icon *ngIf="!matExp3.expanded" class="arrow-acc">expand_more</mat-icon>
@@ -84,9 +88,9 @@
                       </mat-panel-description>
                     </mat-expansion-panel-header>
   
-                    {{selectedLang.sintaxis.tiposPrimitivos}}
+                    {{selectedLang.sintaxis.tipos}}
                     <ul>
-                        <li *ngFor="let prim of selectedLang.sintaxis.primitivos">{{prim}}</li>
+                        <li *ngFor="let prim of selectedLang.sintaxis.tiposEjemplos">{{prim}}</li>
                     </ul>
                 </mat-expansion-panel>
   
