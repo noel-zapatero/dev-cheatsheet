@@ -163,11 +163,14 @@
                     </mat-expansion-panel-header>
   
                     {{selectedLang.sintaxis.arrays}} Ej:
-                    <br>
-                    <code *ngFor="let arr of selectedLang.sintaxis.ejemplosArrays">
-                        <pre>{{arr}}</pre>
-                        <span class="spacer"></span>
-                    </code>
+                    <ul>
+                      <li *ngFor="let arr of selectedLang.sintaxis.ejemplosArrays">
+                        <code >
+                          <pre>{{arr}}</pre>
+                          <span class="spacer"></span>
+                      </code>
+                      </li>
+                    </ul>
                 </mat-expansion-panel>
 
                 <mat-expansion-panel #matExp8 class="sintaxis-acc" hideToggle="true">

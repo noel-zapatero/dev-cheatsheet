@@ -19,7 +19,7 @@ export class AppComponent {
       name: 'Python'
     },
     {
-      name: 'C#'
+      name: 'Ruby'
     }
   ]
 
