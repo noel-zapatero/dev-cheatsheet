@@ -16,3 +16,13 @@ a:visited{
 a:hover{
     color:rgb(255, 115, 115);
 }
+
+
+.h1{
+    text-align: center;
+    font-family: MADhacker !important;
+    font-weight: bolder;
+    font-size: 35px !important;
+    color: red;
+    text-shadow: 2px 2px black;
+}
