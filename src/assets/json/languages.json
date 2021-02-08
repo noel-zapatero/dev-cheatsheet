@@ -130,5 +130,49 @@
             "otherDownloads":[{"name":"Ruby + DevKit","url":"https://www.ruby-lang.org/es/documentation/installation/#installers"},{"name":"Manejadores","url":"https://www.ruby-lang.org/es/documentation/installation/#managers"}],
             "otherActions":[{"name":"MSYS2 (opc)","url":"https://www.msys2.org/"}]
         }
+    },
+    "C#":{
+        "name":"C#",
+        "intro":"C# es un lenguaje tipado multiparadigma desarollado y mantenido por la empresa Microsoft. Creado en el año 2000, se convirtio en el lenguje standard de .NET (Framework creado tambien por Microsoft). Su sintaxis basica deriva de los lenguajes C/C++; con algunos detalles orientados a objetos similares a los de Java. Se ha utilizado para realizar aplicaciones de escritorio, mobile o incluso videojuegos; bajo la plataforma de Unity.",
+        "masInfo":["https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/","https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"],
+        "sintaxis":{
+            "masInfo":["https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/","https://www.w3schools.com/cs/default.asp"],
+            "comentarios":"Los comentarios en C# se escriben de la siguiente forma: Inline con '//' y multilinea con '/* */'",
+            "tiposComentarios":["Inline","Multilinea"],
+            "ejemplosComentarios":["Console.WriteLine(\"Hello World\"); //Esto es un comentario inline","/* Esto es un comentario\nmultilinea */\nConsole.WriteLine(\"Hello World\")"],
+            "convenciones":["Al ser un lenguaje tipado, en C# es necesario explicitar el tipo de las variables/clases que se definan. Ademas, las lineas deben finalizar con un ';' de forma obligatoria. Se utiliza CamelCase como convencion para la definicion de las mismas; ademas de ser CaseSensitive (por lo que 'edadPersona' y 'edadpersona' son 2 variables diferentes). Pueden definirse diferentes variables del mismo tipo, separadas por coma."],
+            "ejemploConvenciones":["int infinityGems = 6;", "string marvelHero = \"Iron Man\", marvelVillain = \"Thanos\";","marvelHero != marvelhero"],
+            "tipos":"Hay 5 tipos de datos base en C#; aunque podemos encontrar un par mas ('long' y 'float') dentro del grupo de numeros:",
+            "tiposEjemplos":["int","double","char - delimitados por las comillas simples ' '","string - delimitados por las comillas dobles \" \"","bool"],
+            "declaraciones":"Las declaraciones son delimitadas por llaves '{}'. Se utiliza el keyword 'class' para la definicion de clases, y el keyword 'namespace' para delimitar secciones de codigo bajo un denominador comun (paquete de clase).",
+            "variables":"Las variables se definen mediante un tipo y un nombre de variable. En el caso de que la variable sea una constante, debera ser precedida por el keyword 'const'.",
+            "ejemplosVariables":["int numeroUno = 1;","const name = \"Tony\";","char avenger = 'a';"],
+            "modificadoresAccess":"C# cuenta con diferentes modificadores de acceso:",
+            "ejemplosModAccess":["public","private","protected","internal"],
+            "modificadoresOtros":"Ademas cuenta con 2 combinaciones que extienden el acceso a los tipos derivados de la clase que los contiene:",
+            "ejemplosModOtros":["protected internal","private protected"],
+            "arrays":"Para definir un array en C# es necesario declarar la clase del mismo y seguirlo por corchetes. Tambien se le puede especificar el tamaño desde su creacion.",
+            "ejemplosArrays":["string[] avengers = {\"Iron Man\",\"Thor\",\"Capitan America\",\"Hulk\"};","string[] avengers = new string[4];"],
+            "operadores":"Hay diferentes tipos de operados en C#:",
+            "operadoresTipos":["Aritmeticos", "Asignacion", "Comparacion", "Logicos"],
+            "ejemplosOperadores":["+, -, *, /, %, ++, --", "=, +=, -=, *=, /=, %=, &=, |=, ^=, >>=, <<=","==, !=, >, <, >=, <=", "&&, ||, !"],
+            "ifelse":"La declaracion de un 'if' en C# se da de la siguiente forma (los bloques 'else if' y 'else' obviamente son opcionales):",
+            "ejemploIfelse":"if(x > y){\n  Console.WriteLine(\"X es mas grande\");\n}else if(x == y){\n  Console.WriteLine(\"X e Y son iguales\");\n}else{\n  Console.WriteLine(\"Y es mas grande\");\n}",
+            "ifelseotros":"El bloque 'if' tambien se puede definir de forma ternaria:",
+            "ejemploIfelseOtro":"bool xMasGrande = (x > y) ? true : false;",
+            "forloop":"La declaracion de un loop 'for' se hace de la siguiente forma:",
+            "defFor":"",
+            "ejemploFor":"for(int i = 0; i < 10; i++){\n  Console.WriteLine(i);\n}",
+            "while":"La declaracion de un loop 'while' se hace de la siguiente manera:",
+            "ejemploWhile":"int index = 0;\nwhile(index < 10){\n  Console.WriteLine(index);\n  i++;\n}",
+            "breakcontinue":"'break' y 'continue' son dos keyword que se pueden utilizar en los loop de C# para salir o saltear una iteracion",
+            "ejemploBreak":"int i = 0;\nwhile(i < 10){\n  i++;\n  if(i == 4){\n    continue;\n  }\n  if(i == 9){\n    break;\n  }\n  Console.WriteLine(i);\n}"
+        },
+        "herramientas":{
+            "frameworks":[{"name":"ASP.NET","url":"https://dotnet.microsoft.com/apps/aspnet"}],
+            "ides":[{"name":"VisualStudio","url":"https://visualstudio.microsoft.com/es/vs/community/"},{"name":"Rider","url":"https://www.jetbrains.com/rider/"},{"name":"VisualCode","url":"https://code.visualstudio.com/"},{"name":"Unity (desarrollo de videojuegos)","url":"https://unity.com/es"},{"name":"MonoDevelop","url":"https://www.monodevelop.com/"}],
+            "otherDownloads":[{"name":".NET Core SDK","url":"https://dotnet.microsoft.com/download/dotnet-core/2.2"}],
+            "otherActions":[{"name":"Instalacion de paquetes en VS","url":"https://www.w3schools.com/cs/cs_getstarted.asp"}]
+        }
     }
 }

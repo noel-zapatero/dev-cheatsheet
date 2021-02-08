@@ -48,7 +48,7 @@
                   {{selectedLang.sintaxis.comentarios}}
                   <ul>
                       <li *ngFor="let tipo of selectedLang.sintaxis.tiposComentarios; let i = index">
-                          {{tipo}} Ej: 
+                          {{tipo}}: 
                           <code>
                               <pre>{{selectedLang.sintaxis.ejemplosComentarios[i]}}</pre>
                           </code>
@@ -145,10 +145,12 @@
                     <ul>
                         <li *ngFor="let mod of selectedLang.sintaxis.ejemplosModAccess">{{mod}}</li>
                     </ul>
-                    {{selectedLang.sintaxis.modificadoresOtros}}
-                    <ul>
-                        <li *ngFor="let mod of selectedLang.sintaxis.ejemplosModOtros">{{mod}}</li>
-                    </ul>
+                    <span *ngIf="selectedLang.sintaxis.modificadoresOtros != ''">
+                      {{selectedLang.sintaxis.modificadoresOtros}}
+                      <ul>
+                          <li *ngFor="let mod of selectedLang.sintaxis.ejemplosModOtros">{{mod}}</li>
+                      </ul>
+                    </span>
                 </mat-expansion-panel>
 
                 <mat-expansion-panel #matExp7 class="sintaxis-acc" hideToggle="true">

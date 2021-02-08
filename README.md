@@ -1,6 +1,6 @@
 # DevCheatsheet
 
-Este proyecto tiene por objetivo hacer una recopilacion basica de sintaxis a traves de los multiples lenguajes que existen actualmente. Cuando un desarrollador conoce varios lenguajes, suele encontrarse con este tipo de problema, en donde no recuerda la sintaxis especifica de una definicion en el lenguaje especifico. La idea de este proyecto es tener todo en un mismo lugar, donde se facilmente accessible.
+Este proyecto tiene por objetivo hacer una recopilacion basica de sintaxis a traves de los multiples lenguajes que existen actualmente. Cuando un desarrollador conoce varios lenguajes, suele encontrarse con este tipo de problema, en donde no recuerda la sintaxis de una definicion en el lenguaje especifico. La idea de este proyecto es tener todo en un mismo lugar, donde sea facilmente accessible.
 
 ## Colaboracion
 

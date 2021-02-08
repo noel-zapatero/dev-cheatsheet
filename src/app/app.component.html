@@ -11,9 +11,9 @@
   <mat-drawer #drawer class="sidenav" mode="side" opened="true">
     <mat-selection-list [multiple]="false">
       <div mat-subheader class="subheader">Lenguajes</div>
-      <mat-list-option *ngFor="let lang of languages" (click)='navigateLang(lang.name)'>
+      <mat-list-option *ngFor="let lang of languages" (click)='navigateLang(lang)'>
         <mat-icon mat-list-icon>code</mat-icon>
-        <div mat-line class="matline">{{lang.name}}</div>
+        <div mat-line class="matline">{{lang}}</div>
       </mat-list-option>
     </mat-selection-list>
     <mat-divider></mat-divider>
