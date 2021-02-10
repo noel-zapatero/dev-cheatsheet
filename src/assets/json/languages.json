@@ -1,6 +1,6 @@
 {
     "Java":{
-        "name":"Java",
+        "name":"java",
         "intro":"Java es un lenguaje basado en clases y orientado a objetos desarrollado por la empresa Sun Mycrosystems, y actualmente mantenido por Oracle Corporation. Creado en 1995 por James Gosling, es un lenguaje tipado con una sintaxis basada en C/C++; el cual es actualmente utilizado en miles de millones de dispositivos en el mundo; en donde se destaca el uso de encapsulacion, polimorfismo y herencia. Se utiliza para aplicaciones web, de escritorio o incluso mobile a traves del Android SDK y su lenguaje derivado, Kotlin.",
         "masInfo":["https://www.oracle.com/java/","https://en.wikipedia.org/wiki/Java_(programming_language)"],
         "sintaxis":{
@@ -44,7 +44,7 @@
         }
     },
     "Python":{
-        "name":"Python",
+        "name":"python",
         "intro":"Python es un lenguaje interpretado de alto nivel, administrado por la empresa Python Software Foundation. Creado a finales de los años ochenta y publicado en 1991 por Guido van Rossum, Python es un robusto lenguaje multi-paradigma que soporta parcialmente la programacion orientada a objetos, la programacion procedural y la programacion funcional. Su filosofia se centra en la legibilidad del codigo escrito utilizando una delimitacion por identacion.",
         "masInfo":["https://www.python.org/","https://en.wikipedia.org/wiki/Python_(programming_language)"],
         "sintaxis":{
@@ -88,7 +88,7 @@
         }
     },
     "Ruby":{
-        "name":"Ruby",
+        "name":"ruby",
         "intro":"Ruby es un lenguaje dinamico orientado a objetos y de codigo abierto, creado y publicado en 1995 por Yukihiro Matsumoto. Incorporando la programacion funcional y la procedural, Ruby mezcla aspectos de Pyhton, Perl, Smalltalk y Lisp, entre otros; donde todo en el codigo es considerado un objeto. Su alta flexibilidad, permiten al programador modificar las partes esenciales del lenguaje, redefiniendolas o incluso quitandolas.",
         "masInfo":["https://www.ruby-lang.org/es/","https://en.wikipedia.org/wiki/Ruby_(programming_language)"],
         "sintaxis":{
@@ -132,7 +132,7 @@
         }
     },
     "C#":{
-        "name":"C#",
+        "name":"c#",
         "intro":"C# es un lenguaje tipado multiparadigma desarollado y mantenido por la empresa Microsoft. Creado en el año 2000, se convirtio en el lenguje standard de .NET (Framework creado tambien por Microsoft). Su sintaxis basica deriva de los lenguajes C/C++; con algunos detalles orientados a objetos similares a los de Java. Se ha utilizado para realizar aplicaciones de escritorio, mobile o incluso videojuegos; bajo la plataforma de Unity.",
         "masInfo":["https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/","https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"],
         "sintaxis":{
@@ -140,7 +140,7 @@
             "comentarios":"Los comentarios en C# se escriben de la siguiente forma: Inline con '//' y multilinea con '/* */'",
             "tiposComentarios":["Inline","Multilinea"],
             "ejemplosComentarios":["Console.WriteLine(\"Hello World\"); //Esto es un comentario inline","/* Esto es un comentario\nmultilinea */\nConsole.WriteLine(\"Hello World\")"],
-            "convenciones":["Al ser un lenguaje tipado, en C# es necesario explicitar el tipo de las variables/clases que se definan. Ademas, las lineas deben finalizar con un ';' de forma obligatoria. Se utiliza CamelCase como convencion para la definicion de las mismas; ademas de ser CaseSensitive (por lo que 'edadPersona' y 'edadpersona' son 2 variables diferentes). Pueden definirse diferentes variables del mismo tipo, separadas por coma."],
+            "convenciones":"Al ser un lenguaje tipado, en C# es necesario explicitar el tipo de las variables/clases que se definan. Ademas, las lineas deben finalizar con un ';' de forma obligatoria. Se utiliza CamelCase como convencion para la definicion de las mismas; ademas de ser CaseSensitive (por lo que 'edadPersona' y 'edadpersona' son 2 variables diferentes). Pueden definirse diferentes variables del mismo tipo, separadas por coma.",
             "ejemploConvenciones":["int infinityGems = 6;", "string marvelHero = \"Iron Man\", marvelVillain = \"Thanos\";","marvelHero != marvelhero"],
             "tipos":"Hay 5 tipos de datos base en C#; aunque podemos encontrar un par mas ('long' y 'float') dentro del grupo de numeros:",
             "tiposEjemplos":["int","double","char - delimitados por las comillas simples ' '","string - delimitados por las comillas dobles \" \"","bool"],
@@ -173,6 +173,50 @@
             "ides":[{"name":"VisualStudio","url":"https://visualstudio.microsoft.com/es/vs/community/"},{"name":"Rider","url":"https://www.jetbrains.com/rider/"},{"name":"VisualCode","url":"https://code.visualstudio.com/"},{"name":"Unity (desarrollo de videojuegos)","url":"https://unity.com/es"},{"name":"MonoDevelop","url":"https://www.monodevelop.com/"}],
             "otherDownloads":[{"name":".NET Core SDK","url":"https://dotnet.microsoft.com/download/dotnet-core/2.2"}],
             "otherActions":[{"name":"Instalacion de paquetes en VS","url":"https://www.w3schools.com/cs/cs_getstarted.asp"}]
+        }
+    },
+    "PHP":{
+        "name":"php",
+        "intro":"PHP es un lenguajes mayormente orientado al desarrollo web mantenido y producido por la empresa The PHP Group. Creado en 1994 por Rasmus Lerdorf, PHP se convirtio en uno de los lenguajes de preferencia en el desarrollo web durante muchos años. El codigo de PHP es procesado en un web server por un interprete como si fuera un modulo; dando como resultado una respuesta HTTP. Actualmente, las antiguas versiones estan discontinuadas y no son soportadas por The PHP Development Team, aunque sigue recibiendo soporte de terceros, como Debian. Usualmente, el codigo PHP suele implementar ademas, codigo HTML, CSS y JS.",
+        "masInfo":["https://www.php.net/","https://en.wikipedia.org/wiki/PHP"],
+        "sintaxis":{
+            "masInfo":["https://www.php.net/manual/es/index.php","https://www.w3schools.com/php/default.asp"],
+            "comentarios":"PHP cuenta con diversas formas de escribir comentarios. Por ejemplo, los comentarios inline tienen 2 formas difentes:",
+            "tiposComentarios":["Inline","Multilinea","Intercalado en el codigo"],
+            "ejemplosComentarios":["<?php\n  echo 'Hello World'; // Esto es un comentario\n  # Esto tambien es un comentario\n?>","<?php\n  /* Este es un comentario\n  multilinea */\n?>","<?php\n  $x = 2 /* +1 */ + 2;\n  echo $x\n  //El '+1' es ignorado\n?>"],
+            "convenciones":"El codigo PHP debe iniciar con '<?php' y debe finalizar con '?>'. El final de cada statement deber ser realizado con un ';'. Las palabras reservadas no son CaseSensitive; pero si lo son los nombres de las variables (por lo que 'echo' y 'ECHO' son lo mismo, pero '$myVar' y '$MYVAR' no). La forma de impresion de datos es usualmente a traves del keyword 'echo'; el cual es mas rapido y eficiente que el 'print' (el cual tambien esta disponible en PHP). Ademas, 'echo' no retorna valor, a diferencia de 'print' el cual retorna '1' (algo que puede ser util dependiendo la situacion). PHP no es un lenguaje tipado.",
+            "ejemploConvenciones":["<?php\n  echo 'Hello World';\n?>","echo == ECHO // $myVar != $MYVAR","echo 'Hello World'; == print 'Hello World';"],
+            "tipos":"PHP cuenta con diversos tipos de datos",
+            "tiposEjemplos":["String","Integer","Float - tambien llamados 'doubles'","Boolean","Array","Object - Utilizado en la creacion de objetos (OOP)","NULL","Resource - No es un tipo de datos especificamente, pero se utiliza como referencia a funciones y recursos externos a PHP."],
+            "declaraciones":"Las declaraciones en PHP deben siempre finalizar con un ' ; '. Ademas, a diferencia de otros lenguajes, el uso de simbolos es diferente: La concatenacion se hace con un ' . ' en vez de un ' + ' (ademas de tener una concatenacion/asignacion); la referencia a constantes o metodos estaticos se realiza mediante el simbolo ' :: ' y la referencia a funciones/variables de un objeto/clase se realizan con ' -> ' en vez de ' . '.",
+            "variables":"Las variables en PHP deben siempre empezar con '$'. Debido al tipo de scope, las variables definidas globalmente no pueden ser accedidas dentro de una funcion (al menos que se utilice el keyboard 'global' o el array '$GLOBALS[index]' - un array donde PHP guarda todas las variables globales-). Tambien se pueden crear constantes con el keyword 'define' como muestra el ejemplo.",
+            "ejemplosVariables":["<?php\n  $batman = 'Bruce Wayne';\n  function printHero(){\n    //echo $batman daria error debido al scope\n    global $batman;\n    #Tambien podria ser usado $GLOBALS['batman']\n    echo $batman;\n  }\n  printHero();\n?>","<?php\n  define('SUPERMAN','Clark Kent');\n  define('TRIO',['Batman','Superman','WonderWoman'])  //Tambien se pueden definir arrays como constantes;\n\n  echo SUPERMAN //por default, no es case sensitive, por lo que 'echo superman' tambien funcionaria;\n\n  function printHeros(){\n    echo trio;  //El scope de las constantes es global, por lo que puede ser accedidas dentro de funciones\n  }\n\n  printHeros();\n?>"],
+            "modificadoresAccess":"",
+            "ejemplosModAccess":[""],
+            "modificadoresOtros":"",
+            "ejemplosModOtros":[""],
+            "arrays":"Los arrays en PHP se definen facilmente (tambien pueden crearse diccionarios, conocidos como 'Array Asociativo').",
+            "ejemplosArrays":["<?php\n  $robin = array('Dick','Jason','Tim','Stephanie','Damien');\n  echo 'El mejor robin fue ' . $robin[0] . '.';\n?>","<?php\n  $afterRobin = array('Dick' => 'Nightwing','Jason' => 'RedHood', 'Tim' => 'Red Robin', 'Stephanie' => 'Spoiler');\n?>"],
+            "operadores":"PHP cuenta con numerosos tipos de operadores:",
+            "operadoresTipos":["Aritmeticos", "Asignacion", "Comparacion","Incremento/Decremento", "Logicos", "String", "Array", "Condicionales"],
+            "ejemplosOperadores":["+, -, *, /, %, **", "=, +=, -=, *=, /=, %=", "==, ===, !=, <>, !==, >, <, >=, <=, <=>", "++$x, $x++, --$x, $x--", "and, or, xor, &&, ||, !", ". .=", "+, ==, ===, !=, <>, !==", "?:, ??"],
+            "ifelse":"La declaracion de 'if' en PHP se da de la siguiente forma:",
+            "ejemploIfelse":"<?php\n  $jlMembers = 6;\n\n  if($jlMembers == 5){\n    echo 'Falta uno';\n  }elseif ($jlMembers == 6){\n    echo 'Estan todos';\n  }else{\n    echo 'Sobra alguien?';\n  }\n?>",
+            "ifelseotros":"Ademas, PHP ofrece la posibilidad de esribir operaciones ternarias mediante '?:'",
+            "ejemploIfelseOtro":"<?php\n  $wonderWoman = 'Diana Prince';\n  echo $secretId = ($wonderWoman == 'Diana Prince') ? true : false;\n?>",
+            "forloop":"Al igual que en otros lenguajes, el loop 'for' se da de la siguiente forma:",
+            "defFor":"",
+            "ejemploFor":"<?php\n  for($i = 0; $i < 10; $i++){\n    echo 'El index es $i';\n  }\n?>",
+            "while":"La declaracion de un loop 'while' se da de la siguiente forma:",
+            "ejemploWhile":"<?php\n  $x = 0;\n\n  while($x < 10){\n    echo '$x';\n    $x++;\n  }\n?>",
+            "breakcontinue":"El uso de 'break' y 'continue' en PHP se da de forma similar a otros lenguajes:",
+            "ejemploBreak":"<?php\n  for($i = 0; $i < 10; $i++){\n    if($i == 5){\n      continue;\n    }\n    if($i == 9){\n      break;\n    }\n    echo 'El index es $i';\n  }\n?>"
+        },
+        "herramientas":{
+            "frameworks":[{"name":"Laravel","url":"https://laravel.com/"},{"name":"CodeIgniter","url":"https://www.codeigniter.com/"},{"name":"Symfony","url":"https://symfony.es/"},{"name":"Zend","url":"https://framework.zend.com/"},{"name":"CakePHP","url":"https://cakephp.org/"}],
+            "ides":[{"name":"NetBeans","url":"https://netbeans.org/"},{"name":"PhpStorm","url":"https://www.jetbrains.com/es-es/phpstorm/"},{"name":"Eclipse","url":"https://www.eclipse.org/"},{"name":"Sublime Text","url":"https://www.sublimetext.com/3"}],
+            "otherDownloads":[{"name":"PHP","url":"https://www.php.net/downloads"},{"name":"XAMPP - Paquete de descarga con lo necesario para correr PHP","url":"https://www.apachefriends.org/es/index.html"},{"name": "WAMPP - similar al XAMPP, especifico para Windows","url":"https://www.wampserver.com/en/"}],
+            "otherActions":[{"name":"Instalacion de PHP en Windows","url":"https://www.php.net/manual/es/install.windows.legacy.index.php"}]
         }
     }
 }

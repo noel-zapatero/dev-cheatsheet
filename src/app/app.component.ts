@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private router: Router){}
 
-  languages = ['Java','Python','Ruby','C#']
+  languages = ['Java','Python','Ruby','C#','PHP']
 
   navigateLang(lang: string){
     this.router.navigate(["lang", lang]);
