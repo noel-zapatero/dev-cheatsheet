@@ -218,5 +218,49 @@
             "otherDownloads":[{"name":"PHP","url":"https://www.php.net/downloads"},{"name":"XAMPP - Paquete de descarga con lo necesario para correr PHP","url":"https://www.apachefriends.org/es/index.html"},{"name": "WAMPP - similar al XAMPP, especifico para Windows","url":"https://www.wampserver.com/en/"}],
             "otherActions":[{"name":"Instalacion de PHP en Windows","url":"https://www.php.net/manual/es/install.windows.legacy.index.php"}]
         }
+    },
+    "JavaScript":{
+        "name":"javascript",
+        "intro":"JavaScript es un lenguaje multiparadigma de alto nivel de compilacion JIT (compilacion en runtime) siguiendo las especificaciones de ECMAScript. Se destaca por ser una de las tecnologias core del desarrollo web, junto con HTML y CSS. Su sintaxis se caracteriza por utilizar tipos dinamicos, orientacion a objetos prototipada, y funciones de primera clase. Siendo multiparadigma, soporta diferentes estilos de programacion, como imperativo (secuencial) y funcional.",
+        "masInfo":["https://www.javascript.com/","https://en.wikipedia.org/wiki/JavaScript","https://www.ecma-international.org/"],
+        "sintaxis":{
+            "masInfo":["https://www.javascript.com/learn/strings","https://www.w3schools.com/js/default.asp"],
+            "comentarios":"JavaScript cuenta con 2 formas de escribir comentarios:",
+            "tiposComentarios":["Inline", "Multilinea"],
+            "ejemplosComentarios":["// Esto es un comentario\nvar x = 7;","/* Esto tambien es\nun comentario */\nvar y = 10;"],
+            "convenciones":"JavaScript es CaseSensitive, por lo que var agePerson != var ageperson. A pesar de que se pueden utilizar diferentes uniones de palabras, usualmente se utiliza CamelCase. Ademas, cada statement debe finalizar con un ';'. Las funciones se definen entre llaves '{ }'. El codigo JS puede ir dentro de un HTML entre los tags <script>[code]</script> o en archivos separados con extension .js (los cuales deben ser luego importados al proyecto).",
+            "ejemploConvenciones":["<script>\n  var newAge = 19;\n  document.getElementById('age').innerHTML = newAge; //Esto es un comment\n</script>"],
+            "tipos":"JavaScript cuenta con diversos tipos; pero ademas es un lenguaje de tipos dinamicos, por lo que una misma variable se le pueden asignar diferentes tipos.",
+            "tiposEjemplos":["Numbers","Strings","Objects","Boolean","Array","Empty","Undefined","Null"],
+            "declaraciones":"Los statement en JavaScript deben siempre finalizar con ';'. Usualmente se utilizan funciones para definir el comportamiento de un Evento (por ej: un click).",
+            "variables":"Las variables se declaran con el keyword 'var'. Luego del ES6 (2015), se agregaron 2 nuevas formas de declarar variables: 'const' y 'let'; las cuales declaran un scope dentro del bloque donde esten siendo definidas (siendo la diferencia que las variables 'const' no pueden ser modificadas una vez asignadas).",
+            "ejemplosVariables":["var wizard = 'Harry Potter';","var wizard = 'Harry Potter';\n{\n  let wizard = 'Albus Dumbledore';\n  //Aqui la variable wizard es Albus Dumbledore\n}\n//Aqui, la variable wizard sigue siendo Harry Potter"],
+            "modificadoresAccess":"",
+            "ejemplosModAccess":[""],
+            "modificadoresOtros":"",
+            "ejemplosModOtros":[""],
+            "arrays":"Los arrays en JavaScript se definen mediante '[ ]'",
+            "ejemplosArrays":["var trio = ['Harry Potter', 'Ron Weasley', 'Hermione Granger'];"],
+            "operadores":"JavaScript cuenta con los siguientes operadores:",
+            "operadoresTipos":["Aritmeticos","Asignacion","String/String y Numbers","Comparacion","Logicos","Tipo","Bitwise"],
+            "ejemplosOperadores":["+, -, *, /, **, %, ++, --", "=, +=, -=, *=, /=, %=, ++=","+, += (concatenacion de strings y numeros)","==, ===, !=, !==, >, <, >=, <=, ?", "&&, ||, !", "typeof, instanceof", "&, |, ^, ~, <<, >>, >>>"],
+            "ifelse":"La declaracion del 'if' en JavaScript se da de la siguiente manera:",
+            "ejemploIfelse":"var horrocruxes = 7;\nif(horrocruxes < 7){\n  //Faltan horrocruxes\n}else{\n  //Hay 7 horrocruxes\n}",
+            "ifelseotros":"Tambien se ofrece la posibilidad de utilizar un operador ternario",
+            "ejemploIfelseOtro":"var horrocruxes = 7;\nvar estanTodos = (horrocruxes == 7) ? 'Si' : 'No, falta alguno';",
+            "forloop":"JavaScript presenta varias formas de recorrer arrays mediante variaciones del loop 'for': 'for' (loop un numero determinado de veces), 'for-in' (loop sobre las propiedades de un objeto), 'for-on' (loop sobre los valores de un objeto iterable), 'Array.forEach() (variacion del 'for-in')'. Sin embargo, la opcion que se utiliza usualmente es la siguiente:",
+            "defFor":"",
+            "ejemploFor":"for(i = 0; i < wizards.length; i++){\n  //print wizard\n}",
+            "while":"Al igual que en otros lenguajes, el loop 'while' en JavaScript se da de la siguiente forma:",
+            "ejemploWhile":"while(i < wizards.length){\n  //print wizard\n  i++;\n}",
+            "breakcontinue":"'break' y 'continue' funciona en JavaScript de la misma forma que en otros lenguajes:",
+            "ejemploBreak":"for(i = 0; i < wizards.length; i++){\n  if(i == 'Harry Potter'){\n    //print llegue a Harry\n    break;\n  }\n  if(i == 'Albus Dumbledore'){\n    continue;\n  }\n  //print cualquier otro mago\n}"
+        },
+        "herramientas":{
+            "frameworks":[{"name":"ReactJS","url":"https://es.reactjs.org/"},{"name":"Angular","url":"https://angularjs.org/"},{"name": "Vue.JS","url":"https://vuejs.org/"},{"name":"EmberJS","url":"https://emberjs.com/"},{"name":"Express.JS","url":"https://expressjs.com/es/"}],
+            "ides":[{"name":"Atom","url":"https://atom.io/"},{"name":"Sublime Text","url":"https://www.sublimetext.com/"},{"name":"VisualStudio","url":"https://visualstudio.microsoft.com/es/vs/"},{"name":"WebStorm","url":"https://www.jetbrains.com/webstorm/"},{"name":"AWS Cloud9","url":"https://aws.amazon.com/es/cloud9/"}],
+            "otherDownloads":[{"name":"Node.js","url":"https://nodejs.org/es/"}],
+            "otherActions":[]
+        }
     }
 }

@@ -344,12 +344,14 @@
               </li>
             </ul>
 
-            Otras Acciones Necesarias:
-            <ul>
-              <li *ngFor="let otherA of selectedLang.herramientas.otherActions">
-                <b>{{otherA.name}}</b>: <a href={{otherA.url}}>{{otherA.url}}</a>
-              </li>
-            </ul>
+            <div *ngIf="selectedLang.herramientas.otherA && selectedLang.herramientas.otherA.length > 0">
+              Otras Acciones Necesarias:
+              <ul>
+                <li *ngFor="let otherA of selectedLang.herramientas.otherActions">
+                  <b>{{otherA.name}}</b>: <a href={{otherA.url}}>{{otherA.url}}</a>
+                </li>
+              </ul>
+            </div>
 
             <span style="font-style: italic">Instrucciones y acciones adicionales para el lenguaje seleccionado pueden llegar a ser necesarias en el uso de cada herramienta. Referir a la documentacion de cada software.</span>
         </mat-expansion-panel>
