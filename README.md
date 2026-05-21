@@ -1,4 +1,4 @@
-https://dev-cheatsheet.herokuapp.com/
+https://dev-cheatsheet.witherwings77.workers.dev/
 
 # DevCheatsheet
 
