@@ -1,44 +1,45 @@
 .accordion .mat-expansion-panel-header-title,
 .accordion .mat-expansion-panel-header-description {
-  flex-basis: 0;
+    flex-basis: 0;
 }
 
 .accordion .mat-expansion-panel-header-description {
-  justify-content: space-between;
-  align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.accordion .mat-form-field + .mat-form-field {
-  margin-left: 8px;
+.accordion .mat-form-field+.mat-form-field {
+    margin-left: 8px;
 }
 
-.acc-container{
+.acc-container {
     width: 95%;
     margin: auto;
 }
 
-.sintaxis-acc:nth-child(odd) mat-expansion-panel-header{
-  background: rgb(200, 200, 200);
+.sintaxis-acc:nth-child(odd) mat-expansion-panel-header {
+    background: rgb(200, 200, 200);
 }
 
-pre{
-  font-family: Consolas,"courier new";
-  color: crimson;
-  font-size: 105%;
-  background-color: #f1f1f1;
-  display: inline-block; /*table para ponerlo en otra linea, sin el vertical align*/
-  vertical-align: middle;
-  white-space: pre;
-  margin: 1em 0px;
-  overflow: hidden;
+pre {
+    font-family: Consolas, "courier new";
+    color: crimson;
+    font-size: 105%;
+    background-color: #f1f1f1;
+    display: inline-block;
+    /*table para ponerlo en otra linea, sin el vertical align*/
+    vertical-align: middle;
+    white-space: pre;
+    margin: 1em 0px;
+    overflow: hidden;
 }
 
-.spacer{
-  margin: 10px;
+.spacer {
+    margin: 10px;
 }
 
-.arrow-acc{
-  color: red;
-  position: absolute;
-  right: 15px
+.arrow-acc {
+    color: red;
+    position: absolute;
+    right: 15px
 }

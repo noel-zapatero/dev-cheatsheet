@@ -5,13 +5,13 @@ import { LangContainerComponent } from './lang-container/lang-container.componen
 import { SoftwareContainerComponent } from './software-container/software-container.component';
 
 const routes: Routes = [
-  { path: '', component: HomeContainerComponent },
-  { path: 'lang/:lang', component: LangContainerComponent },
-  { path: 'software', component: SoftwareContainerComponent },
+    { path: '', component: HomeContainerComponent },
+    { path: 'lang/:lang', component: LangContainerComponent },
+    { path: 'software', component: SoftwareContainerComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
