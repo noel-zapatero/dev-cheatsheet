@@ -13,7 +13,6 @@
       <div mat-subheader class="subheader">Lenguajes</div>
       @for (lang of languages; track lang) {
         <mat-list-option (click)='navigateLang(lang)'>
-          <mat-icon mat-list-icon>code</mat-icon>
           <div mat-line class="matline">{{lang}}</div>
         </mat-list-option>
       }

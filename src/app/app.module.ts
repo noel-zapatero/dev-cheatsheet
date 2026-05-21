@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { HomeContainerComponent } from './home-container/home-container.component';
 import { SoftwareContainerComponent } from './software-container/software-container.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
     declarations: [
