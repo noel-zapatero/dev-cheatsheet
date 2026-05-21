@@ -4,7 +4,8 @@ import languages from '../../assets/json/languages.json'
 @Component({
     selector: 'app-lang-container',
     templateUrl: './lang-container.component.html',
-    styleUrls: ['./lang-container.component.css']
+    styleUrls: ['./lang-container.component.css'],
+    standalone: false
 })
 export class LangContainerComponent implements OnInit {
 
