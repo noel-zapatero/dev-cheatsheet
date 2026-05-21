@@ -1,363 +1,446 @@
 <div class="acc-container">
-    <div style="text-align: center; padding: 20px;">
-        <h1 class="h1">{{selectedLang.name}}</h1>
-    </div>
-    <mat-accordion class="accordion">
-        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Introduccion
-                </mat-panel-title>
-                <mat-panel-description>
-                    Informacion general
-                </mat-panel-description>
-            </mat-expansion-panel-header>
+  <div style="text-align: center; padding: 20px;">
+    <h1 class="h1">{{selectedLang.name}}</h1>
+  </div>
+  <mat-accordion class="accordion">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Introduccion
+        </mat-panel-title>
+        <mat-panel-description>
+          Informacion general
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-            {{selectedLang.intro}}
-            <br>
-            <br>
-            <span>Mas Informacion:</span>
-            <ul>
-                <li *ngFor="let link of selectedLang.masInfo">
-                    <a href={{link}}>{{link}}</a>
-                </li>
-            </ul>
+      {{selectedLang.intro}}
+      <br>
+        <br>
+          <span>Mas Informacion:</span>
+          <ul>
+            @for (link of selectedLang.masInfo; track link) {
+              <li>
+                <a href={{link}}>{{link}}</a>
+              </li>
+            }
+          </ul>
         </mat-expansion-panel>
 
         <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
-            <mat-expansion-panel-header>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Sintaxis Básica
+            </mat-panel-title>
+            <mat-panel-description>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <mat-accordion multi>
+            <mat-expansion-panel #matExp1 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
                 <mat-panel-title>
-                    Sintaxis Básica
+                  Comentarios
                 </mat-panel-title>
                 <mat-panel-description>
+                  @if (!matExp1.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp1.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
                 </mat-panel-description>
-            </mat-expansion-panel-header>
+              </mat-expansion-panel-header>
 
-            <mat-accordion multi>
-                <mat-expansion-panel #matExp1 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Comentarios
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp1.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp1.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+              {{selectedLang.sintaxis.comentarios}}
+              <ul>
+                @for (tipo of selectedLang.sintaxis.tiposComentarios; track tipo; let i = $index) {
+                  <li>
+                    {{tipo}}:
+                    <code>
+                      <pre>{{selectedLang.sintaxis.ejemplosComentarios[i]}}</pre>
+                    </code>
+                  </li>
+                }
+              </ul>
+            </mat-expansion-panel>
 
-                    {{selectedLang.sintaxis.comentarios}}
+            <mat-expansion-panel #matExp2 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Convenciones
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp2.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp2.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              {{selectedLang.sintaxis.convenciones}} Ej:
+              <ul>
+                @for (conv of selectedLang.sintaxis.ejemploConvenciones; track conv) {
+                  <li>
+                    <code>
+                      <pre>{{conv}}</pre>
+                    </code>
+                  </li>
+                }
+              </ul>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel #matExp3 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Tipos
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp3.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp3.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              {{selectedLang.sintaxis.tipos}}
+              <ul>
+                @for (prim of selectedLang.sintaxis.tiposEjemplos; track prim) {
+                  <li>{{prim}}</li>
+                }
+              </ul>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel #matExp4 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Declaraciones
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp4.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp4.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              {{selectedLang.sintaxis.declaraciones}}
+            </mat-expansion-panel>
+
+            <mat-expansion-panel #matExp5 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Variables
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp5.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp5.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              {{selectedLang.sintaxis.variables}} Ejs:
+              <ul>
+                @for (variables of selectedLang.sintaxis.ejemplosVariables; track variables) {
+                  <li>
+                    <code>
+                      <pre>{{variables}}</pre>
+                      <span class="spacer"></span>
+                    </code>
+                  </li>
+                }
+              </ul>
+            </mat-expansion-panel>
+
+            @if (selectedLang.sintaxis.modificadoresAccess != '') {
+              <mat-expansion-panel #matExp6 class="sintaxis-acc" hideToggle="true"
+                >
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Modificadores
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    @if (!matExp6.expanded) {
+                      <mat-icon class="arrow-acc">expand_more</mat-icon>
+                    }
+                    @if (matExp6.expanded) {
+                      <mat-icon class="arrow-acc">expand_less</mat-icon>
+                    }
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                {{selectedLang.sintaxis.modificadoresAccess}}
+                <ul>
+                  @for (mod of selectedLang.sintaxis.ejemplosModAccess; track mod) {
+                    <li>{{mod}}</li>
+                  }
+                </ul>
+                @if (selectedLang.sintaxis.modificadoresOtros != '') {
+                  <span>
+                    {{selectedLang.sintaxis.modificadoresOtros}}
                     <ul>
-                        <li *ngFor="let tipo of selectedLang.sintaxis.tiposComentarios; let i = index">
-                            {{tipo}}:
-                            <code>
-                              <pre>{{selectedLang.sintaxis.ejemplosComentarios[i]}}</pre>
-                          </code>
-                        </li>
+                      @for (mod of selectedLang.sintaxis.ejemplosModOtros; track mod) {
+                        <li>{{mod}}</li>
+                      }
                     </ul>
-                </mat-expansion-panel>
+                  </span>
+                }
+              </mat-expansion-panel>
+            }
 
-                <mat-expansion-panel #matExp2 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Convenciones
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp2.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp2.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+            <mat-expansion-panel #matExp7 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Arrays
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp7.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp7.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
 
-                    {{selectedLang.sintaxis.convenciones}} Ej:
-                    <ul>
-                        <li *ngFor="let conv of selectedLang.sintaxis.ejemploConvenciones">
-                            <code>
-                          <pre>{{conv}}</pre>
-                      </code>
-                        </li>
-                    </ul>
-                </mat-expansion-panel>
+              {{selectedLang.sintaxis.arrays}} Ej:
+              <ul>
+                @for (arr of selectedLang.sintaxis.ejemplosArrays; track arr) {
+                  <li>
+                    <code>
+                      <pre>{{arr}}</pre>
+                      <span class="spacer"></span>
+                    </code>
+                  </li>
+                }
+              </ul>
+            </mat-expansion-panel>
 
-                <mat-expansion-panel #matExp3 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Tipos
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp3.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp3.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+            <mat-expansion-panel #matExp8 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Operadores
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp8.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp8.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
 
-                    {{selectedLang.sintaxis.tipos}}
-                    <ul>
-                        <li *ngFor="let prim of selectedLang.sintaxis.tiposEjemplos">{{prim}}</li>
-                    </ul>
-                </mat-expansion-panel>
+              {{selectedLang.sintaxis.operadores}}
+              <ul>
+                @for (tipo of selectedLang.sintaxis.operadoresTipos; track tipo; let i = $index) {
+                  <li>
+                    {{tipo}} =>
+                    <code>
+                      <pre>{{selectedLang.sintaxis.ejemplosOperadores[i]}}</pre>
+                    </code>
+                  </li>
+                }
+              </ul>
+            </mat-expansion-panel>
 
-                <mat-expansion-panel #matExp4 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Declaraciones
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp4.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp4.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+            <mat-expansion-panel #matExp9 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  If/Else
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp9.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp9.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
 
-                    {{selectedLang.sintaxis.declaraciones}}
-                </mat-expansion-panel>
+              <span>
+                {{selectedLang.sintaxis.ifelse}}
+                <p>
+                  <code>
+                    <pre>{{selectedLang.sintaxis.ejemploIfelse}}</pre>
+                  </code>
+                </p>
+              </span>
+              <span>
+                {{selectedLang.sintaxis.ifelseotros}}
+                <p>
+                  <code>
+                    <pre>{{selectedLang.sintaxis.ejemploIfelseOtro}}</pre>
+                  </code>
+                </p>
+              </span>
+            </mat-expansion-panel>
 
-                <mat-expansion-panel #matExp5 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Variables
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp5.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp5.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+            <mat-expansion-panel #matExp10 class="sintaxis-acc" hideToggle="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  For
+                </mat-panel-title>
+                <mat-panel-description>
+                  @if (!matExp10.expanded) {
+                    <mat-icon class="arrow-acc">expand_more</mat-icon>
+                  }
+                  @if (matExp10.expanded) {
+                    <mat-icon class="arrow-acc">expand_less</mat-icon>
+                  }
+                </mat-panel-description>
+              </mat-expansion-panel-header>
 
-                    {{selectedLang.sintaxis.variables}} Ejs:
-                    <ul>
-                        <li *ngFor="let variables of selectedLang.sintaxis.ejemplosVariables">
-                            <code>
-                          <pre>{{variables}}</pre>
-                          <span class="spacer"></span>
-                      </code>
-                        </li>
-                    </ul>
-                </mat-expansion-panel>
+              <span>
+                {{selectedLang.sintaxis.forloop}}
+                @if (selectedLang.sintaxis.defFor != '') {
+                  <p>
+                    <code>
+                      <pre>{{selectedLang.sintaxis.defFor}}</pre>
+                    </code>
+                  </p>
+                }
+              </span>
+              <p>
+                Ej:
+                <br>
+                  <code>
+                    <pre>{{selectedLang.sintaxis.ejemploFor}}</pre>
+                  </code>
+                </p>
+              </mat-expansion-panel>
 
-                <mat-expansion-panel #matExp6 class="sintaxis-acc" hideToggle="true"
-                    *ngIf="selectedLang.sintaxis.modificadoresAccess != ''">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Modificadores
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp6.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp6.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
+              <mat-expansion-panel #matExp11 class="sintaxis-acc" hideToggle="true">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    While
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    @if (!matExp11.expanded) {
+                      <mat-icon class="arrow-acc">expand_more</mat-icon>
+                    }
+                    @if (matExp11.expanded) {
+                      <mat-icon class="arrow-acc">expand_less</mat-icon>
+                    }
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
 
-                    {{selectedLang.sintaxis.modificadoresAccess}}
-                    <ul>
-                        <li *ngFor="let mod of selectedLang.sintaxis.ejemplosModAccess">{{mod}}</li>
-                    </ul>
-                    <span *ngIf="selectedLang.sintaxis.modificadoresOtros != ''">
-                        {{selectedLang.sintaxis.modificadoresOtros}}
-                        <ul>
-                            <li *ngFor="let mod of selectedLang.sintaxis.ejemplosModOtros">{{mod}}</li>
-                        </ul>
-                    </span>
-                </mat-expansion-panel>
-
-                <mat-expansion-panel #matExp7 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Arrays
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp7.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp7.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-
-                    {{selectedLang.sintaxis.arrays}} Ej:
-                    <ul>
-                        <li *ngFor="let arr of selectedLang.sintaxis.ejemplosArrays">
-                            <code>
-                          <pre>{{arr}}</pre>
-                          <span class="spacer"></span>
-                      </code>
-                        </li>
-                    </ul>
-                </mat-expansion-panel>
-
-                <mat-expansion-panel #matExp8 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Operadores
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp8.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp8.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-
-                    {{selectedLang.sintaxis.operadores}}
-                    <ul>
-                        <li *ngFor="let tipo of selectedLang.sintaxis.operadoresTipos; let i = index">
-                            {{tipo}} =>
-                            <code>
-                                <pre>{{selectedLang.sintaxis.ejemplosOperadores[i]}}</pre>
-                            </code>
-                        </li>
-                    </ul>
-                </mat-expansion-panel>
-
-                <mat-expansion-panel #matExp9 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            If/Else
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp9.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp9.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-
-                    <span>
-                        {{selectedLang.sintaxis.ifelse}}
-                        <p>
-                            <code>
-                                <pre>{{selectedLang.sintaxis.ejemploIfelse}}</pre>
-                            </code>
-                        </p>
-                    </span>
-                    <span>
-                        {{selectedLang.sintaxis.ifelseotros}}
-                        <p>
-                            <code>
-                            <pre>{{selectedLang.sintaxis.ejemploIfelseOtro}}</pre>
-                        </code>
-                        </p>
-                    </span>
-                </mat-expansion-panel>
-
-                <mat-expansion-panel #matExp10 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            For
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp10.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp10.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-
-                    <span>
-                        {{selectedLang.sintaxis.forloop}}
-                        <p *ngIf="selectedLang.sintaxis.defFor != ''">
-                            <code>
-                              <pre>{{selectedLang.sintaxis.defFor}}</pre>
-                          </code>
-                        </p>
-                    </span>
+                <span>
+                  {{selectedLang.sintaxis.while}}
+                  <br>
                     <p>
-                        Ej:
-                        <br>
-                        <code>
-                          <pre>{{selectedLang.sintaxis.ejemploFor}}</pre>
+                      <code>
+                        <pre>{{selectedLang.sintaxis.ejemploWhile}}</pre>
                       </code>
                     </p>
-                </mat-expansion-panel>
+                  </span>
 
-                <mat-expansion-panel #matExp11 class="sintaxis-acc" hideToggle="true">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            While
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp11.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp11.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-
-                    <span>
-                        {{selectedLang.sintaxis.while}}
-                        <br>
-                        <p>
-                            <code>
-                              <pre>{{selectedLang.sintaxis.ejemploWhile}}</pre>
-                          </code>
-                        </p>
-                    </span>
-
-                    <span style="font-style: italic">Lo importante es siempre recordar la condicion de cierre de While
-                        ya que de no ser asi, entraria en loop infinito.</span>
+                  <span style="font-style: italic">Lo importante es siempre recordar la condicion de cierre de While
+                  ya que de no ser asi, entraria en loop infinito.</span>
                 </mat-expansion-panel>
 
                 <mat-expansion-panel #matExp12 class="sintaxis-acc" hideToggle="true">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Break/Continue
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      @if (!matExp12.expanded) {
+                        <mat-icon class="arrow-acc">expand_more</mat-icon>
+                      }
+                      @if (matExp12.expanded) {
+                        <mat-icon class="arrow-acc">expand_less</mat-icon>
+                      }
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+
+                  <span>
+                    {{selectedLang.sintaxis.breakcontinue}}
+                    <br>
+                      <p>
+                        <code>
+                          <pre>{{selectedLang.sintaxis.ejemploBreak}}</pre>
+                        </code>
+                      </p>
+                    </span>
+                  </mat-expansion-panel>
+                </mat-accordion>
+
+                <span>
+                  <br>
+                    Para mas informacion:
+                    <ul>
+                      @for (link of selectedLang.sintaxis.masInfo; track link) {
+                        <li>
+                          <a href={{link}}>{{link}}</a>
+                        </li>
+                      }
+                    </ul>
+                    <br>
+                    </span>
+                  </mat-expansion-panel>
+
+                  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
                     <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Break/Continue
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            <mat-icon *ngIf="!matExp12.expanded" class="arrow-acc">expand_more</mat-icon>
-                            <mat-icon *ngIf="matExp12.expanded" class="arrow-acc">expand_less</mat-icon>
-                        </mat-panel-description>
+                      <mat-panel-title>
+                        Herramientas Necesarias
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Software recomendado/necesario para desarrollar en el lenguaje seleccionado
+                      </mat-panel-description>
                     </mat-expansion-panel-header>
 
-                    <span>
-                        {{selectedLang.sintaxis.breakcontinue}}
-                        <br>
-                        <p>
-                            <code>
-                              <pre>{{selectedLang.sintaxis.ejemploBreak}}</pre>
-                          </code>
-                        </p>
-                    </span>
-                </mat-expansion-panel>
-            </mat-accordion>
+                    Frameworks:
+                    <ul>
+                      @for (fw of selectedLang.herramientas.frameworks; track fw) {
+                        <li>
+                          <b>{{fw.name}}</b>: <a href={{fw.url}}>{{fw.url}}</a>
+                        </li>
+                      }
+                    </ul>
 
-            <span>
-                <br>
-                Para mas informacion:
-                <ul>
-                    <li *ngFor="let link of selectedLang.sintaxis.masInfo">
-                        <a href={{link}}>{{link}}</a>
-                    </li>
-                </ul>
-                <br>
-            </span>
-        </mat-expansion-panel>
+                    IDE's:
+                    <ul>
+                      @for (ide of selectedLang.herramientas.ides; track ide) {
+                        <li>
+                          <b>{{ide.name}}</b>: <a href={{ide.url}}>{{ide.url}}</a>
+                        </li>
+                      }
+                    </ul>
 
-        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Herramientas Necesarias
-                </mat-panel-title>
-                <mat-panel-description>
-                    Software recomendado/necesario para desarrollar en el lenguaje seleccionado
-                </mat-panel-description>
-            </mat-expansion-panel-header>
+                    Otras Descargas Necesarias:
+                    <ul>
+                      @for (other of selectedLang.herramientas.otherDownloads; track other) {
+                        <li>
+                          <b>{{other.name}}</b>: <a href={{other.url}}>{{other.url}}</a>
+                        </li>
+                      }
+                    </ul>
 
-            Frameworks:
-            <ul>
-                <li *ngFor="let fw of selectedLang.herramientas.frameworks">
-                    <b>{{fw.name}}</b>: <a href={{fw.url}}>{{fw.url}}</a>
-                </li>
-            </ul>
+                    @if (selectedLang.herramientas.otherA && selectedLang.herramientas.otherA.length > 0) {
+                      <div>
+                        Otras Acciones Necesarias:
+                        <ul>
+                          @for (otherA of selectedLang.herramientas.otherActions; track otherA) {
+                            <li>
+                              <b>{{otherA.name}}</b>: <a href={{otherA.url}}>{{otherA.url}}</a>
+                            </li>
+                          }
+                        </ul>
+                      </div>
+                    }
 
-            IDE's:
-            <ul>
-                <li *ngFor="let ide of selectedLang.herramientas.ides">
-                    <b>{{ide.name}}</b>: <a href={{ide.url}}>{{ide.url}}</a>
-                </li>
-            </ul>
-
-            Otras Descargas Necesarias:
-            <ul>
-                <li *ngFor="let other of selectedLang.herramientas.otherDownloads">
-                    <b>{{other.name}}</b>: <a href={{other.url}}>{{other.url}}</a>
-                </li>
-            </ul>
-
-            <div *ngIf="selectedLang.herramientas.otherA && selectedLang.herramientas.otherA.length > 0">
-                Otras Acciones Necesarias:
-                <ul>
-                    <li *ngFor="let otherA of selectedLang.herramientas.otherActions">
-                        <b>{{otherA.name}}</b>: <a href={{otherA.url}}>{{otherA.url}}</a>
-                    </li>
-                </ul>
-            </div>
-
-            <span style="font-style: italic">Instrucciones y acciones adicionales para el lenguaje seleccionado pueden
-                llegar a ser necesarias en el uso de cada herramienta. Referir a la documentacion de cada
-                software.</span>
-        </mat-expansion-panel>
-    </mat-accordion>
-</div>
+                    <span style="font-style: italic">Instrucciones y acciones adicionales para el lenguaje seleccionado pueden
+                      llegar a ser necesarias en el uso de cada herramienta. Referir a la documentacion de cada
+                    software.</span>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </div>
